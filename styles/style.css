@@ -111,3 +111,11 @@ footer {
     }
 
   }
+
+  input {
+    display: none;
+}
+
+input:checked + img {
+    border: solid 2px rgb(30, 255, 0)
+}
