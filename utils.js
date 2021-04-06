@@ -3,7 +3,7 @@ import { seenPokemon } from './local-storage-utils.js';
 
 export function findById(array, id) {
     for (let item of array) {
-        if (item.name === id) {
+        if (item.id === id) {
             return item;
         }
     }
@@ -27,9 +27,9 @@ export function threeUnique() {
         || randomPoke2 === randomPoke3
         || randomPoke1 === randomPoke3
     ) {
-        let randomPoke1 = randomPoke();
-        let randomPoke2 = randomPoke();
-        let randomPoke3 = randomPoke();
+        randomPoke1 = randomPoke();
+        randomPoke2 = randomPoke();
+        randomPoke3 = randomPoke();
     }
 
     seenPokemon(randomPoke1);
