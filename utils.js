@@ -1,4 +1,5 @@
 import { pokemon } from './pokemon.js';
+import { seenPokemon } from './local-storage-utils.js';
 
 export function findById(array, id) {
     for (let item of array) {
@@ -31,10 +32,14 @@ export function threeUnique() {
         let randomPoke3 = randomPoke();
     }
 
-    //encounterPokemon(poke1);
-    //encounterPokemon(poke2);
-    //encounterPokemon(poke3);
+    seenPokemon(randomPoke1);
+    seenPokemon(randomPoke2);
+    seenPokemon(randomPoke3);
 
     return [randomPoke1, randomPoke2, randomPoke3];
 
+}
+
+export function findName(name) {
+    return pokemon.find(pokemon => name === pokemon.pokemon);
 }
