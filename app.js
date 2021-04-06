@@ -5,6 +5,8 @@ import { findName } from './utils.js';
 
 const button = document.querySelector('#choose-button');
 
+let totalCaptures = 0;
+
 
 function pokemonInjector() {
     const pokeRadio1 = document.querySelector('#poke1-radio');
@@ -39,11 +41,16 @@ function pokemonInjector() {
 pokemonInjector();
 
 button.addEventListener('click', () => {
+    totalCaptures++;
     const selectedPokemon = document.querySelector('input:checked');
 
     const object = findName(selectedPokemon.value);
 
     catchPokemon(object);
+
+    if (totalCaptures >= 10) {
+        window.location = '../results/index.html';
+    }
 
     pokemonInjector();
 
