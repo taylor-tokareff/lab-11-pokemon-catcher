@@ -14,6 +14,7 @@ export function localizePokedex() {
     if (!stringyPokedex) return [];
 
     const parsedPokedex = JSON.parse(stringyPokedex);
+    console.log(parsedPokedex);
 
     return parsedPokedex;
 }
