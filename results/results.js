@@ -4,6 +4,7 @@ import { localizePokedex } from '../local-storage-utils.js';
 const pokedex = localizePokedex();
 console.log(pokedex, 'pokedex');
 var ctx = document.getElementById('myChart').getContext('2d');
+const playAgain = document.getElementById('play-again');
 
 const names = [];
 const captured = [];
@@ -30,7 +31,7 @@ var myChart = new Chart(ctx, {
             label: 'Pokemon encountered',
             data: encountered,
             backgroundColor: 'lightblue',
-            borderColor: 'steelblue',
+            borderColor: 'blue',
             borderWidth: 1
         }
         ]
@@ -43,3 +44,9 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+playAgain.addEventListener('click', () => {
+    window.location.href = '../index.html';
+    localStorage.clear();
+}
+);
