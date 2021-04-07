@@ -49,7 +49,7 @@ button.addEventListener('click', () => {
     catchPokemon(object);
 
     if (totalCaptures >= 10) {
-        window.location = '../results/index.html';
+        window.location = './results/index.html';
     }
 
     pokemonInjector();
